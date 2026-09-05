@@ -40,5 +40,6 @@ def decompress(string: str) -> str:
 print(compress("aabbbc"))
 print(compress("aaabbcccc"))
 print(compress("abcd"))
+print(compress("//"))
 
 print(decompress("a2b3c"))
