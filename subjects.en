@@ -1,0 +1,144 @@
+EXAM SUBJECT — MEETING ROOMS, COMPRESS/DECOMPRESS, SPIRAL MATRIX
+
+Instructions:
+
+You must implement the following three exercises.
+
+============================================================
+1. MEETING ROOMS
+============================================================
+
+Write a function that takes a list of meetings.
+
+Each meeting is represented by two integers:
+
+[start, end]
+
+where start is the beginning of the meeting and end is the time
+at which the meeting finishes.
+
+Your function must return the minimum number of rooms required
+to hold all meetings without any two meetings using the same room
+at the same time.
+
+Two meetings overlap when one meeting starts before the other
+meeting has finished.
+
+Examples:
+
+Input:
+[[0, 30], [5, 10], [15, 20]]
+
+Output:
+2
+
+Input:
+[[7, 10], [2, 4]]
+
+Output:
+1
+
+
+============================================================
+2. COMPRESS / DECOMPRESS
+============================================================
+
+Write two functions: compress() and decompress().
+
+The compress() function must replace consecutive identical
+characters by the character followed by the number of times it
+appears consecutively.
+
+Example:
+
+Input:
+"aabbbc"
+
+Output:
+"a2b3c"
+
+Another example:
+
+Input:
+"aaabbcccc"
+
+Output:
+"a3b2c4"
+
+Characters that appear only once do not need to have "1" written
+after them.
+
+Therefore:
+
+Input:
+"abcd"
+
+Output:
+"abcd"
+
+The decompress() function must perform the opposite operation.
+
+Example:
+
+Input:
+"a2b3c"
+
+Output:
+"aabbbc"
+
+Input:
+"a3b2c4"
+
+Output:
+"aaabbcccc"
+
+The two functions must be compatible:
+
+decompress(compress("aabbbc"))
+
+must return:
+
+"aabbbc"
+
+
+============================================================
+3. SPIRAL MATRIX
+============================================================
+
+Write a function that takes an integer n and generates an n x n
+matrix containing all integers from 1 to n².
+
+The numbers must be placed in clockwise spiral order, starting
+from the top-left corner.
+
+Example:
+
+Input:
+3
+
+Output:
+
+1 2 3
+8 9 4
+7 6 5
+
+
+Example:
+
+Input:
+4
+
+Output:
+
+ 1  2  3  4
+12 13 14  5
+11 16 15  6
+10  9  8  7
+
+
+============================================================
+END OF SUBJECT
+============================================================
+
+The exercises are independent. You must respect the required
+function behavior and return the expected result for each input.
