@@ -1,0 +1,61 @@
+1. Detect Cycle in a Graph
+
+Description:
+Given a graph represented as an adjacency list or edge list, determine whether the graph contains at least one cycle. The graph may be directed or undirected and may consist of multiple disconnected components. Return true if a cycle exists; otherwise, return false.
+
+LeetCode:
+- Course Schedule (Directed Graph): https://leetcode.com/problems/course-schedule/
+- Course Schedule II: https://leetcode.com/problems/course-schedule-ii/
+
+
+2. String Compression and Decompression
+
+Description:
+Implement two functions:
+- Compress: Given a string, replace consecutive repeated characters with the character followed by its count (e.g., "aaabccdddd" → "a3bc2d4").
+- Decompress: Given a compressed string, reconstruct the original string (e.g., "a3bc2d4" → "aaabccdddd"). Counts may consist of multiple digits.
+
+LeetCode:
+- String Compression (Compression only): https://leetcode.com/problems/string-compression/
+- No official LeetCode equivalent for decompression.
+
+
+3. Word Ladder
+
+Description:
+Given a begin word, an end word, and a dictionary of valid words, find the length of the shortest transformation sequence from the begin word to the end word. Each transformation changes exactly one character, and every intermediate word must exist in the dictionary. Return 0 if no valid transformation exists.
+
+LeetCode:
+https://leetcode.com/problems/word-ladder/
+
+
+4. Meeting Rooms with Room Assignment
+
+Description:
+Given a list of meeting intervals, assign each meeting to a room such that no two overlapping meetings share the same room. Return both the minimum number of rooms required and a mapping from each meeting to its assigned room.
+
+LeetCode:
+- Meeting Rooms II (Minimum rooms only): https://leetcode.com/problems/meeting-rooms-ii/
+- No official LeetCode problem returns the room assignments.
+
+
+5. Spiral Matrix II
+
+Description:
+Given an integer n, generate an n × n matrix filled with the numbers from 1 to n² in clockwise spiral order.
+
+LeetCode:
+https://leetcode.com/problems/spiral-matrix-ii/
+
+
+6. Pattern Search in Eight Directions
+
+Description:
+Given a matrix of characters and a target word, find every occurrence of the word in any of the eight possible straight-line directions: left-to-right, right-to-left, top-to-bottom, bottom-to-top, top-left to bottom-right, bottom-right to top-left, top-right to bottom-left, and bottom-left to top-right. Return the position and direction of every match.
+
+LeetCode:
+No official LeetCode equivalent.
+
+Related:
+- Word Search: https://leetcode.com/problems/word-search/
+- Word Search II: https://leetcode.com/problems/word-search-ii/
