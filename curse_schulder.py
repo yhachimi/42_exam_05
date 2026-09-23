@@ -4,10 +4,10 @@ class Solution(object):
         :type numCourses: int
         :type prerequisites: List[List[int]]
         :rtype: List[int]
-        """ 
+        """
         res = []
         if numCourses >= 1 and not prerequisites:
-           return [i for i in range(numCourses)]
+            return [i for i in range(numCourses)]
 
         graph = {}
 
@@ -18,18 +18,17 @@ class Solution(object):
             else:
                 graph[i] = [j]
 
-
         new_graph = {}
         indegree = {pkg: 0 for pkg in range(numCourses)}
         for pkg, deps in graph.items():
-            for dep in deps: 
+            for dep in deps:
                 if pkg == dep:
                     return []
                 if dep not in new_graph:
                     new_graph[dep] = []
                 if dep in new_graph and pkg not in new_graph[dep]:
-                        new_graph[dep].append(pkg)
-                        indegree[pkg]+= 1
+                    new_graph[dep].append(pkg)
+                    indegree[pkg] += 1
 
         heap = sorted([pkg for pkg in indegree if indegree[pkg] == 0])
 
@@ -48,5 +47,3 @@ class Solution(object):
         if len(res) != numCourses:
             return []
         return res
-
-

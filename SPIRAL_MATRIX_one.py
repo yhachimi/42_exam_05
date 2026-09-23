@@ -14,15 +14,13 @@ class Solution(object):
 
         res = []
 
-
         while top <= bottom and left <= right:
 
-        # right side
-            for col  in range(left, right + 1):
+            # right side
+            for col in range(left, right + 1):
                 res.append(matrix[top][col])
 
             top += 1
-
 
             # down
             for row in range(top, bottom + 1):
@@ -30,23 +28,18 @@ class Solution(object):
 
             right -= 1
 
-
-
-         #left side 
+         # left side
             if top <= bottom:
                 for col in range(right, left - 1, -1):
                     res.append(matrix[bottom][col])
 
-                bottom -= 1 
+                bottom -= 1
 
-
-        # up  side 
+        # up  side
             if left <= right:
                 for row in range(bottom, top - 1, -1):
                     res.append(matrix[row][left])
-            
+
                 left += 1
 
-
         return res
-   

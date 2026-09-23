@@ -4,8 +4,6 @@ class Interval(object):
         self.end = end
 
 
-
-
 class Solution:
     def canAttendMeetings(self, intervals: list[Interval]) -> bool:
         intervals.sort(key=lambda x: x.start)
@@ -15,20 +13,12 @@ class Solution:
             if start < end:
                 return False
 
-
-        return  True
-
-
-
+        return True
 
 
 a = []
-a.append(Interval(start=0, end= 6))
-a.append(Interval(start=5, end= 30))
+a.append(Interval(start=0, end=6))
+a.append(Interval(start=5, end=30))
 
 sol = Solution()
 print(sol.canAttendMeetings(a))
-
-
-
-
