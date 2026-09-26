@@ -4,46 +4,32 @@ class Solution(object):
         :type numCourses: int
         :type prerequisites: List[List[int]]
         :rtype: List[int]
-        """
+        """ 
         res = []
-        if numCourses >= 1 and not prerequisites:
-            return [i for i in range(numCourses)]
+        if numCourses >= 1 and len(prerequisites) == 0:
+            return [i for i  in range(numCourses)]
 
-        graph = {}
 
-        for i, j in prerequisites:
-            if i in graph and j not in graph[i]:
-                graph[i].append(j)
 
-            else:
-                graph[i] = [j]
+        graph = {i: [] for i in range(numCourses)}
+        indegree = [0] * numCourses
+        for curse, pre in prerequisites:
+            graph[pre].append(curse)
+            indegree[curse] += 1 
 
-        new_graph = {}
-        indegree = {pkg: 0 for pkg in range(numCourses)}
-        for pkg, deps in graph.items():
-            for dep in deps:
-                if pkg == dep:
-                    return []
-                if dep not in new_graph:
-                    new_graph[dep] = []
-                if dep in new_graph and pkg not in new_graph[dep]:
-                    new_graph[dep].append(pkg)
-                    indegree[pkg] += 1
+        heap = sorted([curse for curse in range(numCourses) if indegree[curse] == 0])
 
-        heap = sorted([pkg for pkg in indegree if indegree[pkg] == 0])
 
         while heap:
-            pkg = heap.pop(0)
-            res.append(pkg)
-            if not new_graph.get(pkg):
-                continue
-            for dep in sorted(new_graph[pkg]):
-                indegree[dep] -= 1
-                if indegree[dep] == 0:
-                    heap.append(dep)
+            c = heap.pop()
+            res.append(c)
+            for next_curse in graph[c]:
+                indegree[next_curse] -= 1 
+                if indegree[next_curse] == 0:
+                    heap.append(next_curse)
 
             heap.sort()
-
-        if len(res) != numCourses:
-            return []
+        if len(res) !=  numCourses:
+            return []     
         return res
+
