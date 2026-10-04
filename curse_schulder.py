@@ -33,3 +33,10 @@ class Solution(object):
             return []     
         return res
 
+
+
+
+
+s = Solution()
+
+print(s.findOrder(4, [[1,0],[2,0],[3,1],[3,2]]))
